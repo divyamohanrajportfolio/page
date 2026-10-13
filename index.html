@@ -381,10 +381,13 @@ body:has(#p-about:not([hidden])) .body-grid.first { padding-top:44px; row-gap:44
 body:has(#p-about:not([hidden])) .stat span { color:#6B5546; }
 body:has(#p-about:not([hidden])) .stat b { color:#205F62; }
 .flogo.fisd img { object-fit:cover; }
+.bar { padding-block: 24px; }
+.brand .namemark { display:block; height:54px; width:auto; max-width:60vw; }
+@media (max-width: 700px) { .brand .namemark { height:42px; } }
 </style>
 
 <div class="bar">
-  <a class="brand" href="#about"><b>Divya Mohanraj</b></a>
+  <a class="brand" href="#about" aria-label="Divya Mohanraj"><img class="namemark" src="labels/name.png" alt="Divya Mohanraj" width="198" height="54"></a>
   <nav aria-label="Pages" id="nav">
     <a href="#about">About me</a>
     <a href="#publications">Research &amp; Publications</a>
