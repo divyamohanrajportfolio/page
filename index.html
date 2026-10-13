@@ -463,20 +463,31 @@ document.documentElement.classList.add('js');
     if (!st || !card || !hello) return;
     var mq = window.matchMedia ? window.matchMedia('(min-width: 961px)') : { matches: true };
     var rm = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
-    var tick = false;
-    function apply() {
-      tick = false;
-      if (!mq.matches || rm.matches) { card.style.transform = hello.style.transform = ''; card.style.opacity = hello.style.opacity = ''; hello.style.pointerEvents = ''; return; }
-      var y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
-      var h = st.offsetHeight || 660, p = Math.min(Math.max((y - h * 0.12) / (h * 0.8), 0), 1);
-      var e = p * p * (3 - 2 * p);
+    var tick = false, cur = 0, target = 0;
+    function render() {
+      var h = st.offsetHeight || 660;
+      var e = cur * cur * (3 - 2 * cur);
       var dx = (st.offsetWidth - card.offsetWidth) / 2 - card.offsetLeft;
       card.style.transform = 'translate3d(' + (dx * e).toFixed(1) + 'px,0,0)';
       var o = 1 - Math.min(1, Math.max(0, (e - 0.25) / 0.6));
       hello.style.opacity = o.toFixed(3);
       hello.style.pointerEvents = o < 0.05 ? 'none' : '';
     }
-    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(apply); } }, { passive: true });
+    function step() {
+      tick = false;
+      cur += (target - cur) * 0.045;
+      if (Math.abs(target - cur) < 0.0008) cur = target;
+      render();
+      if (cur !== target) { tick = true; requestAnimationFrame(step); }
+    }
+    function apply() {
+      if (!mq.matches || rm.matches) { card.style.transform = hello.style.transform = ''; card.style.opacity = hello.style.opacity = ''; hello.style.pointerEvents = ''; cur = target = 0; return; }
+      var y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+      var h = st.offsetHeight || 660;
+      target = Math.min(Math.max((y - h * 0.12) / (h * 0.95), 0), 1);
+      if (!tick) { tick = true; requestAnimationFrame(step); }
+    }
+    window.addEventListener('scroll', apply, { passive: true });
     window.addEventListener('resize', apply);
     apply();
   })();
