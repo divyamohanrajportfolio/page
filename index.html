@@ -15,18 +15,18 @@
 /* Layout: split stage with an off-white block, a small portrait card on its edge, and the greeting beside it.
    Subpages share the header and footer. Type is one sans in light weights with hairline rules for a quiet, premium feel. */
 :root {
-  --bg: #3A2318;
-  --bg-lift: #46291C;
-  --card: #4A2E20;
-  --strip: #2E1B12;
+  --bg: #2B2018;
+  --bg-lift: #352920;
+  --card: #3C2E23;
+  --strip: #1E1610;
   --paper: #F3ECE2;
   --ink: #F6EEE4;
-  --muted: #D8C2AE;
-  --faint: #B79F8B;
+  --muted: #D9CDBB;
+  --faint: #A89A86;
   --accent: #F6EEE4;
   --link: #205F62;
   --link-dark: #5BA9AB;
-  --accent-ink: #3A2318;
+  --accent-ink: #2B2018;
   --rule: rgba(246,238,228,.16);
   --head: "Poppins", "Helvetica Neue", Arial, sans-serif;
   --body: "Poppins", "Helvetica Neue", Arial, sans-serif;
@@ -66,7 +66,7 @@ main { max-width: 1280px; margin-inline: auto; }
 .stage { position: relative; display: grid; grid-template-columns: 38% minmax(0, 1fr); min-height: 660px; width: 100vw; margin-left: calc(50% - 50vw); }
 .paper { background: var(--paper); }
 html, body { overflow-x: clip; }
-.card { position: absolute; top: 150px; bottom: 86px; display: flex; flex-direction: column; left: calc(38% - 236px); width: 362px; box-shadow: 0 22px 50px rgba(28,14,8,.35); }
+.card { position: absolute; top: 150px; bottom: 86px; display: flex; flex-direction: column; left: calc(38% - 236px); width: 362px; box-shadow: 0 22px 50px rgba(15,12,8,.35); }
 .card .top { background: var(--card); padding: 32px 24px 26px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
 .avatar { width: 180px; height: 180px; border-radius: 50%; margin: 0 auto 26px; overflow: hidden; box-shadow: 0 0 0 3px var(--card), 0 0 0 4px rgba(246,238,228,.6); }
 .avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
@@ -79,7 +79,7 @@ html, body { overflow-x: clip; }
 .icons svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .icons .li { font-family: var(--head); font-weight: 600; font-size: 1.1rem; line-height: 1; }
 
-.hello { padding: 150px 40px 80px 138px; max-width: 840px; }
+.hello { padding: 150px 40px 80px 178px; max-width: 880px; }
 .hello h1 { margin-top: -.12em; }
 h1 { font-family: var(--head); font-weight: 500; font-size: clamp(3.4rem, 6.6vw, 6rem); line-height: 1; letter-spacing: -.02em; margin: 0 0 22px; }
 .hello .sub { font-family: var(--head); font-weight: 400; font-size: 1.7rem; line-height: 1.3; letter-spacing: .005em; margin: 0 0 34px; color: var(--ink); opacity: 1; }
@@ -132,7 +132,7 @@ h1 { font-family: var(--head); font-weight: 500; font-size: clamp(3.4rem, 6.6vw,
 .zoom { position: relative; display: block; width: 148px; aspect-ratio: 1 / 1; padding: 0; border: 1.5px solid rgba(246,238,228,.45); border-radius: 18px; background: none; cursor: zoom-in; overflow: hidden; font: inherit; color: inherit; }
 .zoom img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, filter .3s; }
 .zoom:hover img { transform: scale(1.05); filter: brightness(.82); }
-.zoom .hint { position: absolute; left: 50%; bottom: 12px; transform: translate(-50%, 8px); opacity: 0; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; background: rgba(46,27,18,.88); color: var(--ink); padding: 7px 14px; border-radius: 999px; white-space: nowrap; transition: opacity .25s, transform .25s; }
+.zoom .hint { position: absolute; left: 50%; bottom: 12px; transform: translate(-50%, 8px); opacity: 0; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; background: rgba(30,22,16,.88); color: var(--ink); padding: 7px 14px; border-radius: 999px; white-space: nowrap; transition: opacity .25s, transform .25s; }
 .zoom:hover .hint, .zoom:focus-visible .hint { opacity: 1; transform: translate(-50%, 0); }
 .shot figcaption { color: var(--faint); font-size: .72rem; margin-top: 8px; letter-spacing: .02em; line-height: 1.5; }
 .light .shot figcaption { color: #8A6F5E; }
@@ -140,7 +140,7 @@ h1 { font-family: var(--head); font-weight: 500; font-size: clamp(3.4rem, 6.6vw,
 .more { margin: 4px 0 30px; font-family: var(--head); font-weight: 400; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; background: none; color: var(--ink); border: 1px solid rgba(246,238,228,.5); border-radius: 999px; padding: 10px 26px; cursor: pointer; transition: background .25s; }
 .more:hover { background: rgba(246,238,228,.12); }
 .extra[hidden] { display: none; }
-.lb { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 24px; background: rgba(28,14,8,.92); cursor: zoom-out; animation: fade .25s ease both; }
+.lb { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; padding: 24px; background: rgba(15,12,8,.92); cursor: zoom-out; animation: fade .25s ease both; }
 .lb img { max-width: min(1200px, 100%); max-height: 82vh; object-fit: contain; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
 .lb p { display: none; margin: 0; color: var(--muted); font-size: .85rem; text-align: center; }
 .lb .x { position: absolute; top: 18px; right: 24px; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
@@ -149,7 +149,7 @@ h1 { font-family: var(--head); font-weight: 500; font-size: clamp(3.4rem, 6.6vw,
 .js .rv.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js .rv { opacity: 1; transform: none; transition: none; } .zoom img { transition: none; } }
 .panel { transition: transform .3s ease, box-shadow .3s ease; }
-.panel:hover, .js .panel.rv.in:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(20,9,4,.35); }
+.panel:hover, .js .panel.rv.in:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(10,8,5,.35); }
 .panel.light { background: rgba(243,236,226,.93); border-color: transparent; border-radius: 24px; color: #3A2318; }
 .panel.light h3, .panel.light h4 { color: #3A2318; }
 .panel.light .org { color: #6B4F3E; }
@@ -159,7 +159,7 @@ h1 { font-family: var(--head); font-weight: 500; font-size: clamp(3.4rem, 6.6vw,
 .panel.light .bul li::marker { color: #8A6F5E; }
 .panel.light .tags li { border-color: rgba(58,35,24,.28); color: #6B4F3E; }
 .panel.light .subentry { border-left-color: rgba(58,35,24,.22); }
-.panel.light .subentry::before { background: #3A2318; }
+.panel.light .subentry::before { background: #231A13; }
 .panel.light .tl { border-bottom-color: rgba(58,35,24,.3); }
 .panel.light .logo { border-color: rgba(58,35,24,.3); }
 .grp-h { font-family: var(--head); font-weight: 500; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
@@ -224,8 +224,8 @@ footer a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .panel.light .doi.none { color: #8A6F5E; }
 .panel .courses { margin-top: 14px; }
 .panel:has(> .courses) .org { margin-bottom: 0; }
-.lcard { display: flex; gap: 18px; align-items: stretch; margin-top: 18px; padding: 14px; border: 1px solid var(--rule); border-radius: 20px; background: rgba(46,27,18,.5); text-decoration: none; color: inherit; transition: transform .3s, border-color .3s, background .3s; max-width: 640px; }
-.lcard:hover { transform: translateY(-3px); border-color: rgba(246,238,228,.5); background: rgba(46,27,18,.8); }
+.lcard { display: flex; gap: 18px; align-items: stretch; margin-top: 18px; padding: 14px; border: 1px solid var(--rule); border-radius: 20px; background: rgba(30,22,16,.5); text-decoration: none; color: inherit; transition: transform .3s, border-color .3s, background .3s; max-width: 640px; }
+.lcard:hover { transform: translateY(-3px); border-color: rgba(246,238,228,.5); background: rgba(30,22,16,.8); }
 .lthumb { flex: none; width: 112px; aspect-ratio: 1 / 1; border-radius: 16px; border: 1.5px solid rgba(246,238,228,.45); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(145deg, #6B4531, #3A2318); color: var(--ink); }
 .lthumb svg { width: 34px; height: 34px; stroke: currentColor; fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 .lthumb span { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -245,9 +245,9 @@ footer a { text-decoration: none; border-bottom: 1px solid var(--rule); }
 .skill-list { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 40px; }
 .skill-list li { break-inside: avoid; font-weight: 600; font-size: 1rem; margin: 0 0 12px; padding-left: 18px; position: relative; color: var(--ink); }
 .skill-list li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--faint); }
-.lthumb { position: relative; overflow: hidden; padding: 0; background: #3A2318; }
+.lthumb { position: relative; overflow: hidden; padding: 0; background: #231A13; }
 .lthumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; }
-.lthumb .badge { position: absolute; left: 8px; bottom: 8px; width: 30px; height: 30px; border-radius: 50%; background: rgba(46,27,18,.88); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,238,228,.4); }
+.lthumb .badge { position: absolute; left: 8px; bottom: 8px; width: 30px; height: 30px; border-radius: 50%; background: rgba(30,22,16,.88); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,238,228,.4); }
 .lthumb .badge svg { width: 16px; height: 16px; }
 .lcard.big .lthumb .badge { width: 38px; height: 38px; left: 10px; bottom: 10px; }
 .lcard.big .lthumb .badge svg { width: 20px; height: 20px; }
@@ -314,6 +314,73 @@ a.tl.pl, .courses a, .panel.light a.tl.pl { color: inherit; font-weight: inherit
 /* v26 image labels */
 .body-grid > h2.lab { margin: -4px 0 0; }
 .body-grid > h2.lab img { display: block; max-width: 100%; height: auto; }
+
+/* v27 background art, stagger, tilt, tab fade */
+.bgart { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; color: rgba(243,236,226,.075); transition: opacity .4s ease; }
+.bgart svg { position: absolute; top: 0; height: auto; translate: 0 var(--py, 0px); transform: rotate(var(--r0, 0deg)); will-change: translate, transform; }
+header, main, footer.foot { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .bgart svg { animation: drift var(--d, 60s) ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translate(0,0) rotate(var(--r0)); } to { transform: translate(var(--dx),var(--dy)) rotate(var(--r1)); } }
+}
+.page.fadeout { opacity: 0; transition: opacity .18s ease; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .js .panel.rv.in.done { transition: opacity .3s ease, transform .22s ease-out, box-shadow .3s ease; }
+  .js .panel.rv.in.done:hover { transform: perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-3px); }
+}
+
+/* v28 opening-page line-art */
+.stageart { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; color: rgba(243,236,226,.085); }
+.stageart svg { position: absolute; height: auto; transform: rotate(var(--r0, 0deg)); }
+.stageart svg.dk { color: rgba(58,35,24,.16); }
+.stage .hello { position: relative; z-index: 1; }
+.stage .card { z-index: 2; }
+@media (prefers-reduced-motion: no-preference) { .stageart svg { animation: drift var(--d, 30s) ease-in-out infinite alternate; } }
+@media (max-width: 960px) { .stageart { display: none; } }
+
+/* v29 flipped lower sections (About below the opening, Publications below 'what I research') */
+body:has(#p-about:not([hidden])), body:has(#p-publications:not([hidden])) { --bg:#F3ECE2; --bg-lift:#EBE2D5; --ink:#2B2018; --muted:#6B5546; --faint:#8C7563; --rule:rgba(43,32,24,.18); --accent:#2B2018; --accent-ink:#F3ECE2; --link-dark:#205F62; background:#F3ECE2; background-image:none; color-scheme:light; }
+body:has(#p-about:not([hidden])) .bar, body:has(#p-publications:not([hidden])) .bar, body:has(#p-about:not([hidden])) .stage, body:has(#p-publications:not([hidden])) .stage, body:has(#p-about:not([hidden])) .darkband, body:has(#p-publications:not([hidden])) .darkband { --bg:#2B2018; --bg-lift:#352920; --card:#3C2E23; --strip:#1E1610; --ink:#F6EEE4; --muted:#D9CDBB; --faint:#A89A86; --rule:rgba(246,238,228,.16); --accent:#F6EEE4; --accent-ink:#2B2018; --link-dark:#5BA9AB; color:#F6EEE4; background:#2B2018; }
+body:has(#p-about:not([hidden])) .bar, body:has(#p-publications:not([hidden])) .bar, body:has(#p-about:not([hidden])) .darkband, body:has(#p-publications:not([hidden])) .darkband { box-shadow:0 0 0 100vmax #2B2018; clip-path:inset(0 -100vmax); }
+body:has(#p-about:not([hidden])) .bgart, body:has(#p-publications:not([hidden])) .bgart { color:rgba(43,32,24,.085); }
+body:has(#p-about:not([hidden])) .panel, body:has(#p-publications:not([hidden])) .panel, body:has(#p-about:not([hidden])) .panel.light, body:has(#p-publications:not([hidden])) .panel.light { border-color:rgba(43,32,24,.08); background:rgba(255,253,249,.94); }
+body:has(#p-about:not([hidden])) .panel:hover, body:has(#p-publications:not([hidden])) .panel:hover, body:has(#p-about:not([hidden])) .js .panel.rv.in:hover, body:has(#p-publications:not([hidden])) .js .panel.rv.in:hover { box-shadow:0 18px 40px rgba(43,32,24,.18); }
+body:has(#p-about:not([hidden])) .darkband .panel, body:has(#p-publications:not([hidden])) .darkband .panel { border-color:rgba(246,238,228,.22); background:rgba(246,238,228,.1); }
+body:has(#p-about:not([hidden])) .stat, body:has(#p-publications:not([hidden])) .stat, body:has(#p-about:not([hidden])) .lcard, body:has(#p-publications:not([hidden])) .lcard { background:rgba(255,253,249,.94); border-color:rgba(43,32,24,.12); }
+body:has(#p-about:not([hidden])) .stat:hover, body:has(#p-publications:not([hidden])) .stat:hover { background:#FFFFFF; }
+body:has(#p-about:not([hidden])) .lcard:hover, body:has(#p-publications:not([hidden])) .lcard:hover { background:#FFFFFF; border-color:rgba(43,32,24,.35); }
+body:has(#p-about:not([hidden])) .lthumb, body:has(#p-publications:not([hidden])) .lthumb { --muted:#E3D2BD; color:#F3ECE2; border-color:rgba(43,32,24,.3); }
+body:has(#p-about:not([hidden])) .chip, body:has(#p-publications:not([hidden])) .chip { border-color:rgba(43,32,24,.45); color:#2B2018; }
+body:has(#p-about:not([hidden])) .chip:hover, body:has(#p-publications:not([hidden])) .chip:hover { background:#205F62; border-color:#205F62; color:#F6EEE4; }
+body:has(#p-about:not([hidden])) .chip.on, body:has(#p-publications:not([hidden])) .chip.on { background:#2B2018; color:#F3ECE2; border-color:#2B2018; }
+body:has(#p-about:not([hidden])) .cite, body:has(#p-publications:not([hidden])) .cite { border-color:rgba(43,32,24,.4); color:#2B2018; }
+body:has(#p-about:not([hidden])) .body-grid.first { grid-template-columns:minmax(0,1fr); gap:22px; }
+body:has(#p-about:not([hidden])) .body-grid.first > h2.lab { margin:0 auto; text-align:center; }
+body:has(#p-about:not([hidden])) .body-grid.first > h2.lab img { margin-inline:auto; }
+body:has(#p-about:not([hidden])) .body-grid.first { --ink:#F6EEE4; --muted:#D9CDBB; --faint:#A89A86; --rule:rgba(246,238,228,.16); background:#2B2018; box-shadow:0 0 0 100vmax #2B2018; clip-path:inset(0 -100vmax); border-top-color:transparent; }
+body:has(#p-about:not([hidden])) .body-grid.first .lcard { --ink:#2B2018; --muted:#6B5546; --faint:#8C7563; --rule:rgba(43,32,24,.18); color:#2B2018; }
+body:has(#p-publications:not([hidden])) .darkband .body-grid { grid-template-columns:minmax(0,1fr); gap:22px; }
+body:has(#p-publications:not([hidden])) .darkband .body-grid > h2.lab { margin:0 auto; text-align:center; }
+body:has(#p-publications:not([hidden])) .darkband .body-grid > h2.lab img { margin-inline:auto; }
+body:has(#p-about:not([hidden])) .body-grid.first .lcard { background:#FFFDF9; }
+body:has(#p-about:not([hidden])) .stats { padding-bottom:40px; }
+
+.frow { display:flex; align-items:center; gap:22px; margin-top:22px; }
+.frow:first-child { margin-top:0; }
+.frow .lcard { flex:1; min-width:0; margin-top:0; }
+.flogo { flex:none; width:104px; height:104px; border-radius:50%; background:#FFFDF9; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 0 0 1px rgba(246,238,228,.35), 0 12px 28px rgba(10,8,5,.35); }
+.flogo img { width:100%; height:100%; object-fit:contain; display:block; }
+.flogo.txt { font-family:var(--head); font-weight:600; font-size:1.05rem; letter-spacing:.14em; color:#2B2018; }
+@media (max-width:700px) { .frow { flex-direction:column; align-items:flex-start; gap:12px; } .flogo { width:72px; height:72px; } }
+body:has(#p-about:not([hidden])) .stat { background:#FFFDF9; --muted:#6B5546; }
+body:has(#p-about:not([hidden])) .stat:hover { background:#FFFFFF; }
+body:has(#p-about:not([hidden])) .stat b { color:var(--link-dark); }
+body:has(#p-about:not([hidden])) .stat span { color:var(--muted); }
+body:has(#p-about:not([hidden])) .stats { background:#2B2018; box-shadow:0 0 0 100vmax #2B2018; clip-path:inset(0 -100vmax); padding-top:44px; padding-bottom:44px; margin-top:0; }
+body:has(#p-about:not([hidden])) .body-grid.first { padding-top:44px; row-gap:44px; border-top:0; }
+body:has(#p-about:not([hidden])) .stat span { color:#6B5546; }
+body:has(#p-about:not([hidden])) .stat b { color:#205F62; }
+.flogo.fisd img { object-fit:cover; }
 </style>
 
 <div class="bar">
@@ -325,10 +392,13 @@ a.tl.pl, .courses a, .panel.light a.tl.pl { color: inherit; font-weight: inherit
   </nav>
 </div>
 
+<div id="artsrc" hidden><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 14 81.2 32 81.2 68 50 86 18.8 68 18.8 32Z"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 8H60M42 8V38L16 84Q10 94 22 94H78Q90 94 84 84L58 38V8"/><path d="M26 72Q50 82 74 72"/><circle cx="46" cy="60" r="2.2"/><circle cx="56" cy="52" r="1.8"/></svg><svg viewBox="0 0 142 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 14 71.2 32 71.2 68 40 86 8.8 68 8.8 32Z"/><path d="M71.2 32 102.4 14 133.6 32 133.6 68 102.4 86 71.2 68"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12V84Q22 92 30 92H70Q78 92 78 84V12M18 12H82"/><path d="M22 52Q36 46 50 52T78 52"/><path d="M22 34H34M22 70H34"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="36" r="11"/><circle cx="20" cy="74" r="7"/><circle cx="80" cy="74" r="7"/><path d="M43 45 26 67M57 45 74 67"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8H58M44 8V36M58 8V36"/><path d="M44 36C20 46 12 64 12 74A38 38 0 0 0 88 74C88 64 80 46 58 36"/><path d="M18 74Q50 86 82 74"/></svg><svg viewBox="0 0 240 90" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 62 28 50 48 62 68 50 88 62 108 50 128 62 148 50 168 62 188 50 208 62 228 50"/><path d="M65 50V28M71 50V28M165 62V82M171 62V82"/><circle cx="48" cy="62" r="4"/><circle cx="188" cy="50" r="4"/><circle cx="68" cy="22" r="4"/><circle cx="168" cy="88" r="0.1"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8H62M40 8V80A10 10 0 0 0 60 80V8"/><path d="M40 52Q50 58 60 52"/><circle cx="50" cy="66" r="2"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="5"/><ellipse cx="50" cy="50" rx="42" ry="15"/><ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(120 50 50)"/><circle cx="92" cy="50" r="2.5"/><circle cx="71" cy="86.4" r="2.5"/><circle cx="29" cy="13.6" r="2.5"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M44 12Q44 4 50 4T56 12V26H44Z"/><path d="M41 26H59"/><path d="M46 26V74L50 92 54 74V26"/><circle cx="50" cy="98" r="1.6"/></svg><svg viewBox="0 0 112 120" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 10 56 25 56 55 30 70 4 55 4 25Z"/><path d="M82 10 108 25 108 55 82 70 56 55 56 25"/><path d="M56 55 82 70 82 100 56 115 30 100 30 70"/></svg><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 10A8 8 0 0 1 58 10V60A18 18 0 1 1 42 60Z"/><path d="M62 20H70M62 32H70M62 44H70"/><path d="M50 30V68"/><circle cx="50" cy="78" r="7"/></svg><svg viewBox="0 0 144 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 70 28 52 50 66 72 46 94 60 114 40 136 54"/><circle cx="8" cy="70" r="5"/><circle cx="28" cy="52" r="5"/><circle cx="50" cy="66" r="5"/><circle cx="72" cy="46" r="5"/><circle cx="94" cy="60" r="5"/><circle cx="114" cy="40" r="5"/><circle cx="136" cy="54" r="5"/></svg></div>
+<div class="bgart" id="bgart" aria-hidden="true"></div>
 <main>
   <!-- ABOUT -->
   <div class="page" id="p-about">
     <div class="stage-wrap" id="stagewrap"><div class="stage">
+      <div class="stageart" id="stageart" aria-hidden="true"></div>
       <div class="paper"></div>
       <div class="hello">
         <h1>Hello</h1>
@@ -355,7 +425,7 @@ a.tl.pl, .courses a, .panel.light a.tl.pl { color: inherit; font-weight: inherit
     </div></div>
     <div class="stats"><div class="stat"><b>13</b><span>Publications</span></div><div class="stat"><b>5</b><span>First-author papers</span></div><div class="stat"><b>1</b><span>Sole-author paper</span></div><div class="stat"><b>4</b><span>Research scholarships</span></div></div>
     <div id="work">
-    <div class="body-grid first"><h2 class="lab"><img src="labels/featured-in.png" alt="Featured in" style="width:130px"></h2><div><a class="lcard big" href="https://www.instagram.com/p/Da0DVYBiN8M/" target="_blank" rel="noopener"><span class="lthumb"><img src="spotlight.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></span></span><span class="lbody"><span class="src">Instagram · Institute for Youth in Policy</span><span class="lt">Fellow Spotlight</span><span class="ld">Featured on the official YIP Instagram as 1 of 3 out of 65 fellows in the Summer 2026 cohort, for meaningful work in green chemistry and policy.</span><span class="go">Open link ↗</span></span></a><a class="lcard big" href="https://www.friscoisd.org/article/2663137/" target="_blank" rel="noopener"><span class="lthumb"><img src="bpa.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24"><path d="M5 4h11v16H7a2 2 0 0 1-2-2z"/><path d="M16 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h5"/></svg></span></span><span class="lbody"><span class="src">Frisco ISD · District news</span><span class="lt">26 BPA Students Earn National Championships</span><span class="ld">District recognition of the Business Professionals of America national winners, including the Virtual Social Media Marketing Campaign team placing Top 10 in the Nation and Best in Show.</span><span class="go">Open link ↗</span></span></a></div></div>
+    <div class="body-grid first"><h2 class="lab"><img src="labels/featured-in.png" alt="Featured in" style="width:130px"></h2><div><div class="frow"><span class="flogo"><img src="logos/yip-logo.png" alt="Institute for Youth in Policy"></span><a class="lcard big" href="https://www.instagram.com/p/Da0DVYBiN8M/" target="_blank" rel="noopener"><span class="lthumb"><img src="spotlight.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></span></span><span class="lbody"><span class="src">Instagram · Institute for Youth in Policy</span><span class="lt">Fellow Spotlight</span><span class="ld">Featured on the official YIP Instagram as 1 of 3 out of 65 fellows in the Summer 2026 cohort, for meaningful work in green chemistry and policy.</span><span class="go">Open link ↗</span></span></a></div><div class="frow"><span class="flogo fisd"><img src="logos/fisd-logo.png" alt="Frisco ISD"></span><a class="lcard big" href="https://www.friscoisd.org/article/2663137/" target="_blank" rel="noopener"><span class="lthumb"><img src="bpa.jpg" alt=""><span class="badge"><svg viewBox="0 0 24 24"><path d="M5 4h11v16H7a2 2 0 0 1-2-2z"/><path d="M16 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h5"/></svg></span></span><span class="lbody"><span class="src">Frisco ISD · District news</span><span class="lt">26 BPA Students Earn National Championships</span><span class="ld">District recognition of the Business Professionals of America national winners, including the Virtual Social Media Marketing Campaign team placing Top 10 in the Nation and Best in Show.</span><span class="go">Open link ↗</span></span></a></div></div></div>
     <div class="body-grid"><h2 class="lab"><img src="labels/education.png" alt="Education" style="width:105px"></h2><div><article class="panel"><div class="eh"><img class="logo" src="logos/tams.png" alt="" width="48" height="48"><div><h3><a class="tl pl" href="https://tams.unt.edu/" target="_blank" rel="noopener">Texas Academy of Mathematics and Science</a></h3><p class="org">University of North Texas · Grades 11–12</p><p class="dates">Expected graduation May 2027</p></div></div></article><article class="panel"><div class="eh"><img class="logo" src="logos/centennial.png" alt="" width="48" height="48"><div><h3><a class="tl pl" href="https://www.friscoisd.org/o/chs/" target="_blank" rel="noopener">Centennial High School</a></h3><p class="org">Grades 9–10</p><p class="dates">Aug 2023 – Aug 2025</p></div></div></article><article class="panel"><h3>Relevant coursework</h3><ul class="courses"><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=191195" target="_blank" rel="noopener">CHEM 1413 · Honors General Chemistry I</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=191200" target="_blank" rel="noopener">CHEM 1430 · Laboratory Sequence for General Chemistry I</a></li><li><a href="https://unt.catalog.acalog.com/preview_course_nopop.php?catoid=40&amp;coid=192328" target="_blank" rel="noopener">MATH 1710 · Calculus I</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=191199" target="_blank" rel="noopener">CHEM 1423 · Honors General Chemistry II</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=191202" target="_blank" rel="noopener">CHEM 1440 · Laboratory Sequence for General Chemistry II</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=37&amp;coid=171647" target="_blank" rel="noopener">MATH 1720 · Calculus II</a></li><li><a href="https://catalog.unt.edu/preview_course.php?catoid=40&amp;coid=192347&amp;print" target="_blank" rel="noopener">STAT 3680 · Applied Statistics</a></li><li><a href="https://unt.catalog.acalog.com/preview_course_nopop.php?catoid=40&amp;coid=191203" target="_blank" rel="noopener">CHEM 2370 · Organic Chemistry I</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=191207&amp;print" target="_blank" rel="noopener">CHEM 3210 · Organic Chemistry Laboratory I</a></li><li><a href="https://catalog.unt.edu/preview_course.php?catoid=37&amp;coid=171651&amp;print" target="_blank" rel="noopener">MATH 2730 · Multivariable Calculus</a></li><li><a href="https://unt.catalog.acalog.com/preview_course_nopop.php?catoid=40&amp;coid=193056" target="_blank" rel="noopener">PHYS 1710 · Mechanics</a></li><li><a href="https://catalog.unt.edu/preview_course_nopop.php?catoid=40&amp;coid=193057&amp;print" target="_blank" rel="noopener">PHYS 1730 · Laboratory in Mechanics</a></li><li><a href="https://catalog.unt.edu/preview_course.php?catoid=40&amp;coid=191205&amp;print" target="_blank" rel="noopener">CHEM 2900 · Introduction to Chemical Research</a></li></ul></article></div></div>
     <div class="body-grid"><h2 class="lab"><img src="labels/skills.png" alt="Skills" style="width:59px"></h2><div><ul class="skill-list"><li>Abraham solvation parameter model</li><li>van’t Hoff and modified Apelblat modeling</li><li>Spectrophotometry and Beer–Lambert calibration</li><li>Volumetric solubility measurements</li><li>IBM SPSS</li><li>Excel Solver curve fitting</li><li>Autodesk Fusion 360 and CAD</li></ul></div></div>
     <div class="body-grid"><h2 class="lab"><img src="labels/experience.png" alt="Experience" style="width:106px"></h2><div><article class="panel light"><div class="eh"><img class="logo" src="logos/bcpp.png" alt="" width="48" height="48"><div><h3><a class="tl" href="https://www.bcpp.org/" target="_blank" rel="noopener">Author and Intern</a></h3><p class="org">Breast Cancer Prevention Partners (BCPP) · Internship</p><p class="dates">Jul 2026 – Present</p></div></div><ul class="bul"><li>Writing an article for <b>Protect Our Breasts (POB)</b>, a program within BCPP, for its <b>national website</b>, based on my analysis of <b>5 popular cosmetic products</b> for endocrine disruptors, phthalates, carcinogens, and fragrance allergens, and on which ingredients to avoid.</li><li><b>Invited to join POB as an intern</b> after sharing this research; developing strategies with POB’s director to reach <b>high school students</b>.</li></ul><ul class="tags"><li>Toxicology and Scientific Research</li></ul></article><article class="panel light"><div class="eh"><img class="logo" src="logos/tams.png" alt="" width="48" height="48"><div><h3><a class="tl pl" href="https://tams.unt.edu/" target="_blank" rel="noopener">Texas Academy of Mathematics and Science</a></h3><p class="org">Denton, Texas · 1 yr 6 mos</p></div></div><div class="sub"><div class="subentry"><h4>Student Researcher</h4><p class="dates">Aug 2025 – Present</p><ul class="bul"><li>Applying the <b>Abraham solvation parameter model</b> to characterize the solubilizing properties of environmentally sustainable replacements for toxic manufacturing solvents, using experimental <b>spectrophotometric and volumetric</b> measurements.</li><li><b>12 peer-reviewed publications</b> (5 first-author), plus 1 sole-author paper accepted by UNT Wingspan.</li><li><b>2x recipient</b> of a $4,000 merit-based scholarship and <b>2x UNT $500 Undergraduate Research Fellowship (URF)</b>.</li></ul><ul class="tags"><li>Physical Chemistry</li><li>Green Chemistry</li><li>Scientific Research</li></ul></div><div class="subentry"><h4>Early Summer Researcher</h4><p class="dates">May 2025 – Jul 2025</p><p>Competitively selected as <b>1 of 24 from over 200</b> for a <b>$4,000 scholarship</b> to conduct <b>40 hours per week</b> of research in solvation chemistry under Dr. William Acree in the Department of Chemistry at UNT.</p><ul class="tags"><li>Physical Chemistry</li><li>Green Chemistry</li></ul></div></div><div class="gallery"><figure class="shot"><button class="zoom" type="button" data-full="lab.jpg" data-cap="Solvation Chemistry Laboratory research group, University of North Texas" aria-label="Enlarge photo: Solvation Chemistry Laboratory research group, University of North Texas"><img src="lab.jpg" alt="Solvation Chemistry Laboratory research group, University of North Texas"><span class="hint">Enlarge</span></button></figure></div></article><article class="panel light"><div class="eh"><img class="logo" src="logos/bb.png" alt="" width="48" height="48"><div><h3>Co-Founder of Books &amp; Bridges</h3><p class="org">Books &amp; Bridges · Nonprofit · Denton, Texas</p><p class="dates">May 2025 – Present</p></div></div><ul class="bul"><li><b>Founded a student-led nonprofit</b> expanding <b>book access</b> for underserved elementary-age children.</li><li>Write <b>reflection prompts</b> on values, emotions, future aspirations, challenges, and problem solving for each book box, and receive children’s responses back through partner organizations.</li></ul><ul class="tags"><li>Nonprofit Management</li></ul><div class="gallery"><figure class="shot"><button class="zoom" type="button" data-full="bb1.jpg" data-cap="Books &amp; Bridges volunteers choosing books" aria-label="Enlarge photo: Books &amp; Bridges volunteers choosing books"><img src="bb1.jpg" alt="Books &amp; Bridges volunteers choosing books"><span class="hint">Enlarge</span></button></figure><figure class="shot"><button class="zoom" type="button" data-full="bb2.jpg" data-cap="Books &amp; Bridges book donation delivery" aria-label="Enlarge photo: Books &amp; Bridges book donation delivery"><img src="bb2.jpg" alt="Books &amp; Bridges book donation delivery"><span class="hint">Enlarge</span></button></figure></div></article><article class="panel light"><div class="eh"><img class="logo" src="logos/yip.png" alt="" width="48" height="48"><div><h3><a class="tl" href="https://yipinstitute.org/" target="_blank" rel="noopener">Public Policy Fellow</a></h3><p class="org">Institute for Youth in Policy · Fellowship</p><p class="dates">Jun 2026 – Aug 2026</p></div></div><ul class="bul"><li>Selected as <b>1 of 65 fellows out of 1,350 applicants (5% acceptance)</b> to the <b>Youth in Policy (YIP) Fellowship</b> Summer 2026 cohort.</li><li><b>Policy brief</b> on federal regulations of <b>per- and polyfluoroalkyl substances (PFAS)</b> in cosmetics and clothing brands accepted for publication.</li><li>Participated in <b>biweekly seminars</b> with political and educational leaders on how federal regulations are written and evaluated, applying that understanding to analyze gaps in federal PFAS regulation.</li></ul><ul class="tags"><li>Toxicology</li></ul><div class="gallery"><figure class="shot"><button class="zoom" type="button" data-full="yip-cert-1.jpg" data-cap="Institute for Youth in Policy Fellowship certificate" aria-label="Enlarge photo: Institute for Youth in Policy Fellowship certificate"><img src="yip-cert-1.jpg" alt="Institute for Youth in Policy Fellowship certificate"><span class="hint">Enlarge</span></button></figure></div></article><article class="panel light"><div class="eh"><img class="logo" src="logos/wing.png" alt="" width="48" height="48"><div><h3><a class="tl" href="https://www.untwingspan.org/" target="_blank" rel="noopener">UNT Wingspan Journal Author</a></h3><p class="org">UNT Wingspan · Research journal</p><p class="dates">Jan 2026 – Jul 2026</p></div></div><ul class="bul"><li><b>Sole-author paper accepted for publication</b> (forthcoming Spring 2027): <i>Replacement of Toxic Cosmetic Ingredients with the Green Solvent Diethyl Adipate Demonstrating Similar Solvation Behaviors</i>.</li><li>Cross-applied <b>mole-fraction solubility data</b> against toxicology literature by categorizing polar and non-polar solvation to confirm the functionality of <b>diethyl adipate</b> as a replacement for industrial formulation.</li></ul><ul class="tags"><li>Toxicology</li></ul></article></div></div>
@@ -366,11 +436,13 @@ a.tl.pl, .courses a, .panel.light a.tl.pl { color: inherit; font-weight: inherit
 
   <!-- PUBLICATIONS -->
   <div class="page" id="p-publications" hidden>
+    <div class="darkband">
     <div class="sub-head">
       <h1>Research projects &amp; publications</h1>
       <p>I have thirteen papers on solvation thermodynamics, solvent selection, and corrections to published solubility data. Five as first author, and one as sole author. <a class="tl" href="https://www.researchgate.net/profile/Divya-Mohanraj-2/research" target="_blank" rel="noopener">ResearchGate profile</a></p>
     </div>
     <div class="body-grid"><h2 class="lab"><img src="labels/what-i-research.png" alt="What I research" style="width:210px"></h2><div><div class="explain panel"><p><b>Solvation thermodynamics</b> studies how a compound dissolves in a liquid and how much energy that process involves. In Dr. Acree’s lab, I use the <b>Abraham solvation parameter model</b>, which gives each compound a set of numerical descriptors and uses them to predict how it dissolves in different solvents. These predictions reduce the number of solubility measurements a lab has to run.</p><p><b>Green solvents</b> matter because solvents carry the ingredients in cosmetics, medicines, and manufacturing, and some common ones are toxic. A green solvent is a safer replacement that performs a similar job. My sole-author paper tests <b>diethyl adipate</b> as a replacement for toxic cosmetic ingredients, and my commentaries correct errors in published solubility data so that later work builds on accurate numbers.</p></div></div></div>
+    </div>
     <div class="chips" id="chips"><button type="button" class="chip on" data-f="all">All</button><button type="button" class="chip" data-f="first">First author</button><button type="button" class="chip" data-f="inpress">In press</button></div>
     <div class="body-grid"><h2 class="lab"><img src="labels/sole-author.png" alt="Sole author" style="width:127px"></h2><div><article class="panel light pub" data-first="0" data-inpress="1"><span class="badge">Sole author</span><h3>Replacement of Toxic Cosmetic Ingredients with the Green Solvent Diethyl Adipate Demonstrating Similar Solvation Behaviors</h3><p class="org"><i>UNT Wingspan Research Journal</i></p><p class="dates">July 2026</p><p class="a"><b>Mohanraj, D.</b> (sole author)</p><p>Accepted for publication, forthcoming Spring 2027. Cross-applied experimental mole-fraction solubility results against toxicology literature, categorizing polar and non-polar solvation performance to confirm the functionality of diethyl adipate as a replacement for industrial formulation.</p><div class="pubrow"><span class="doi none">DOI not yet assigned</span><button type="button" class="cite" data-cite="Mohanraj, D. (in press). Replacement of Toxic Cosmetic Ingredients with the Green Solvent Diethyl Adipate Demonstrating Similar Solvation Behaviors. UNT Wingspan Research Journal.">Cite</button></div></article></div></div>
     <div class="body-grid"><h2 class="lab"><img src="labels/co-authored.png" alt="Co-authored" style="width:136px"></h2><div><article class="panel light pub" data-first="0" data-inpress="0"><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2025.2523754" target="_blank" rel="noopener">Determination of experiment-based Abraham model solute descriptors for compounds exhibiting potential medicinal or agricultural properties</a></h3><p class="org"><i>Physics and Chemistry of Liquids, 63(6), 851–873</i></p><p class="dates">July 2025</p><p class="a">Lin, B., Turner, C., Kabin, A., <b>Mohanraj, D.</b>, Kowtha, S., Sun, A., Acree, W. E.</p><p>Determined six-value Abraham model solute descriptors, which encode a molecule’s polarity, hydrogen bonding, and size, for 12 medicinal and agricultural compounds including letrozole and finerenone, revealing suppressed hydrogen-bond donor values that signal possible intramolecular hydrogen bonding and extending machine-learning training datasets.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2025.2523754" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2025.2523754</a><button type="button" class="cite" data-cite="Lin, B., Turner, C., Kabin, A., Mohanraj, D., Kowtha, S., Sun, A., &amp; Acree, W. E. (2025). Determination of experiment-based Abraham model solute descriptors for compounds exhibiting potential medicinal or agricultural properties. Physics and Chemistry of Liquids, 63(6), 851–873. https://doi.org/10.1080/00319104.2025.2523754">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="0"><h3><a class="tl pl" href="https://www.sciencedirect.com/science/article/abs/pii/S0167732225013716?via%3Dihub" target="_blank" rel="noopener">Comments regarding “Volumetric, acoustic, and conductometric studies of ionic surfactants in aqueous ammonium acetate-ethylene glycol deep eutectic solvent”</a></h3><p class="org"><i>Journal of Molecular Liquids, 436, 128194</i></p><p class="dates">July 2025</p><p class="a">Turner, C., <b>Mohanraj, D.</b>, Sun, A., Kabin, A., Kowtha, S., Lin, B., Acree, W. E.</p><p>Identified miscalculated apparent molal volumes for two cationic surfactants, CTAB and DTAB, by recalculating the values from the original authors’ densities and finding that the solvent’s density exceeded the mixture’s density, revealing an error in the published data.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1016/j.molliq.2025.128194" target="_blank" rel="noopener">https://doi.org/10.1016/j.molliq.2025.128194</a><button type="button" class="cite" data-cite="Turner, C., Mohanraj, D., Sun, A., Kabin, A., Kowtha, S., Lin, B., &amp; Acree, W. E. (2025). Comments regarding “Volumetric, acoustic, and conductometric studies of ionic surfactants in aqueous ammonium acetate-ethylene glycol deep eutectic solvent”. Journal of Molecular Liquids, 436, 128194. https://doi.org/10.1016/j.molliq.2025.128194">Cite</button></div></article><article class="panel light pub" data-first="1" data-inpress="0"><span class="badge">First author</span><h3><a class="tl pl" href="https://www.sciencedirect.com/science/article/abs/pii/S0167732225016952?via%3Dihub" target="_blank" rel="noopener">Comments on “experimental and simulation study on the solubility of 1-naphthylamine in twelve neat solvents”</a></h3><p class="org"><i>Journal of Molecular Liquids, 437, 128518</i></p><p class="dates">September 2025</p><p class="a"><b>Mohanraj, D.</b>, Lin, B., Kabin, A., Turner, C., Sun, A., Kowtha, S., Acree, W. E.</p><p>Reanalyzed published mole-fraction solubility data for 1-naphthylamine across twelve solvents using IBM SPSS, identifying a temperature unit-scaling error and deriving corrected van’t Hoff coefficients, confirmed as mathematically consistent through slope-intercept correlation.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1016/j.molliq.2025.128518" target="_blank" rel="noopener">https://doi.org/10.1016/j.molliq.2025.128518</a><button type="button" class="cite" data-cite="Mohanraj, D., Lin, B., Kabin, A., Turner, C., Sun, A., Kowtha, S., &amp; Acree, W. E. (2025). Comments on “experimental and simulation study on the solubility of 1-naphthylamine in twelve neat solvents”. Journal of Molecular Liquids, 437, 128518. https://doi.org/10.1016/j.molliq.2025.128518">Cite</button></div></article><article class="panel light pub" data-first="1" data-inpress="0"><span class="badge">First author</span><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2025.2582200" target="_blank" rel="noopener">Common errors made in the mathematical representation of experimental data using the van’t Hoff and modified Apelblat equations and their effect on calculated thermodynamic quantities</a></h3><p class="org"><i>Physics and Chemistry of Liquids, 64(1), 171–185</i></p><p class="dates">October 2025</p><p class="a"><b>Mohanraj, D.</b>, Jamdagneya, A., Varadharajan, A., Acree, W. E.</p><p>Discovered errors in van’t Hoff and modified Apelblat equation coefficients that forced calculated Gibbs energy values to zero, then used Excel Solver to curve fit 36 systems and confirmed that two independent fitting methods produced identical results.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2025.2582200" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2025.2582200</a><button type="button" class="cite" data-cite="Mohanraj, D., Jamdagneya, A., Varadharajan, A., &amp; Acree, W. E. (2025). Common errors made in the mathematical representation of experimental data using the van’t Hoff and modified Apelblat equations and their effect on calculated thermodynamic quantities. Physics and Chemistry of Liquids, 64(1), 171–185. https://doi.org/10.1080/00319104.2025.2582200">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="1"><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2025.2605435" target="_blank" rel="noopener">Development of updated Abraham model correlations for predicting solute transfer into 1,4-dioxane and methyl acetate from both water and the gas phase</a></h3><p class="org"><i>Physics and Chemistry of Liquids (in press)</i></p><p class="dates">December 2025</p><p class="a">Lin, B., Turner, C., Kabin, A., <b>Mohanraj, D.</b>, Kowtha, S., Sun, A., Acree, W. E.</p><p>Expanded Abraham model correlations for predicting how compounds transfer into 1,4-dioxane and methyl acetate by adding experimental mole-fraction solubility data, improving coverage of solutes whose hydrogen-bond acceptor descriptor values exceed unity.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2025.2605435" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2025.2605435</a><button type="button" class="cite" data-cite="Lin, B., Turner, C., Kabin, A., Mohanraj, D., Kowtha, S., Sun, A., &amp; Acree, W. E. (in press). Development of updated Abraham model correlations for predicting solute transfer into 1,4-dioxane and methyl acetate from both water and the gas phase. Physics and Chemistry of Liquids. https://doi.org/10.1080/00319104.2025.2605435">Cite</button></div></article><article class="panel light pub" data-first="1" data-inpress="0"><span class="badge">First author</span><h3><a class="tl pl" href="https://doi.org/10.1007/s10953-025-01550-4" target="_blank" rel="noopener">Comments regarding “Solid–liquid equilibrium solubility and thermodynamic properties of 2,4,6-trinitro-3-bromoanisole in different pure solvents”</a></h3><p class="org"><i>Journal of Solution Chemistry, 55, 935–939</i></p><p class="dates">January 2026</p><p class="a"><b>Mohanraj, D.</b>, Damera, N., Acree, W. E.</p><p>Recalculated solid–liquid equilibrium data for 2,4,6-trinitro-3-bromoanisole across water and eleven solvents, correcting a mixed-solvent model that had been misapplied to single-solvent data.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1007/s10953-025-01550-4" target="_blank" rel="noopener">https://doi.org/10.1007/s10953-025-01550-4</a><button type="button" class="cite" data-cite="Mohanraj, D., Damera, N., &amp; Acree, W. E. (2026). Comments regarding “Solid–liquid equilibrium solubility and thermodynamic properties of 2,4,6-trinitro-3-bromoanisole in different pure solvents”. Journal of Solution Chemistry, 55, 935–939. https://doi.org/10.1007/s10953-025-01550-4">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="0"><h3><a class="tl pl" href="https://doi.org/10.1080/00319104.2026.2654126" target="_blank" rel="noopener">Abraham model equations for estimating the solubility of solid organic compounds in diethyl adipate</a></h3><p class="org"><i>Physics and Chemistry of Liquids, 64(3), 555–571</i></p><p class="dates">March 2026</p><p class="a">Kabin, A., <b>Mohanraj, D.</b>, Lin, B., Kowtha, S., Sun, A., Turner, C., Acree, W. E.</p><p>Applied experimentally measured mole-fraction solubility data for 34 crystalline organic solutes in diethyl adipate to derive predictive water-to-solvent and gas-to-solvent correlations that back-calculated the data to within 0.13 log units.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2026.2654126" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2026.2654126</a><button type="button" class="cite" data-cite="Kabin, A., Mohanraj, D., Lin, B., Kowtha, S., Sun, A., Turner, C., &amp; Acree, W. E. (2026). Abraham model equations for estimating the solubility of solid organic compounds in diethyl adipate. Physics and Chemistry of Liquids, 64(3), 555–571. https://doi.org/10.1080/00319104.2026.2654126">Cite</button></div></article><article class="panel light pub" data-first="1" data-inpress="0"><span class="badge">First author</span><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2026.2680647" target="_blank" rel="noopener">Abraham general solvation parameter model: use of calculated solute descriptors to examine possible intramolecular hydrogen-bond formation and keto-enol tautomerism</a></h3><p class="org"><i>Physics and Chemistry of Liquids, 64(4), 738–752</i></p><p class="dates">May 2026</p><p class="a"><b>Mohanraj, D.</b>, Lin, B., Kabin, A., Kowtha, S., Sun, A., Jamdagneya, A., … Acree, W. E.</p><p>Measured mole-fraction solubilities of dehydroacetic acid in 15 pure solvents using Beer–Lambert calibration curves, then used Excel Solver to calculate all six Abraham model solute descriptors, confirming that its hydroxyl proton is engaged entirely in intramolecular hydrogen bonding.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2026.2680647" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2026.2680647</a><button type="button" class="cite" data-cite="Mohanraj, D., Lin, B., Kabin, A., Kowtha, S., Sun, A., &amp; Jamdagneya, A., … Acree, W. E. (2026). Abraham general solvation parameter model: use of calculated solute descriptors to examine possible intramolecular hydrogen-bond formation and keto-enol tautomerism. Physics and Chemistry of Liquids, 64(4), 738–752. https://doi.org/10.1080/00319104.2026.2680647">Cite</button></div></article><article class="panel light pub" data-first="1" data-inpress="1"><span class="badge">First author</span><h3><a class="tl pl" href="https://linkinghub.elsevier.com/retrieve/pii/S0021961426000972" target="_blank" rel="noopener">Comments regarding “Determination and correlation of solid-liquid phase equilibrium data for cymoxanil in 12 mono-solvents and one binary mixture solvent at 283.15–328.15 K”</a></h3><p class="org"><i>Journal of Chemical Thermodynamics (in press)</i></p><p class="dates">June 2026</p><p class="a"><b>Mohanraj, D.</b>, Varadharajan, A., Julson, B., Lei, A., Acree, W. E.</p><p>Identified miscalculated van’t Hoff coefficients for cymoxanil across 13 solvent systems, tracing the error to the original authors regressing a 100-fold scaled value instead of the true mole fraction, then re-modeled the data to derive corrected coefficients and dissolution enthalpies.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1016/j.jct.2026.107720" target="_blank" rel="noopener">https://doi.org/10.1016/j.jct.2026.107720</a><button type="button" class="cite" data-cite="Mohanraj, D., Varadharajan, A., Julson, B., Lei, A., &amp; Acree, W. E. (in press). Comments regarding “Determination and correlation of solid-liquid phase equilibrium data for cymoxanil in 12 mono-solvents and one binary mixture solvent at 283.15–328.15 K”. Journal of Chemical Thermodynamics. https://doi.org/10.1016/j.jct.2026.107720">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="1"><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2026.2707599" target="_blank" rel="noopener">Abraham solvation parameter model: experiment-based solute descriptors for pesticides and pesticide precursors</a></h3><p class="org"><i>Physics and Chemistry of Liquids (in press)</i></p><p class="dates">July 2026</p><p class="a">Varadharajan, A., <b>Mohanraj, D.</b>, Lei, A., Acree, W. E.</p><p>Determined updated Abraham model solute descriptors for diuron and monuron using newly measured solubilities in 16 organic solvents, reducing deviations between measured and back-calculated values to within 0.17 log units.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2026.2707599" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2026.2707599</a><button type="button" class="cite" data-cite="Varadharajan, A., Mohanraj, D., Lei, A., &amp; Acree, W. E. (in press). Abraham solvation parameter model: experiment-based solute descriptors for pesticides and pesticide precursors. Physics and Chemistry of Liquids. https://doi.org/10.1080/00319104.2026.2707599">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="1"><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2026.2714041" target="_blank" rel="noopener">Development of updated Abraham model correlations for predicting solute transfer into propyl acetate and isopropyl acetate from both water and the gas phase</a></h3><p class="org"><i>Physics and Chemistry of Liquids (in press)</i></p><p class="dates">August 2026</p><p class="a">Wilson, C., <b>Mohanraj, D.</b>, Varadharajan, A., Lei, A., Acree, W. E.</p><p>Expanded Abraham model correlations for propyl acetate and isopropyl acetate using newly compiled solubility data, growing the datasets by up to 92 percent and improving predictive accuracy to within 0.1 log units.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2026.2714041" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2026.2714041</a><button type="button" class="cite" data-cite="Wilson, C., Mohanraj, D., Varadharajan, A., Lei, A., &amp; Acree, W. E. (in press). Development of updated Abraham model correlations for predicting solute transfer into propyl acetate and isopropyl acetate from both water and the gas phase. Physics and Chemistry of Liquids. https://doi.org/10.1080/00319104.2026.2714041">Cite</button></div></article><article class="panel light pub" data-first="0" data-inpress="1"><h3><a class="tl pl" href="https://www.tandfonline.com/doi/full/10.1080/00319104.2026.2731560" target="_blank" rel="noopener">Abraham general solvation parameter model: predictive expressions for solute transfer into hexyl acetate from both water and from the gas phase</a></h3><p class="org"><i>Physics and Chemistry of Liquids (in press)</i></p><p class="dates">September 2026</p><p class="a">Gallimore, A., Damera, N., Jamdagneya, A., Lei, A., <b>Mohanraj, D.</b>, Varadharajan, A., Kabin, A., Kowtha, S., Sun, A., Acree, W. E.</p><p>Derived new Abraham model correlations for hexyl acetate from newly measured solubilities of 36 crystalline organic compounds, back-calculating the data to within 0.13 log units.</p><div class="pubrow"><a class="doi" href="https://doi.org/10.1080/00319104.2026.2731560" target="_blank" rel="noopener">https://doi.org/10.1080/00319104.2026.2731560</a><button type="button" class="cite" data-cite="Gallimore, A., Damera, N., Jamdagneya, A., Lei, A., Mohanraj, D., Varadharajan, A., Kabin, A., Kowtha, S., Sun, A., &amp; Acree, W. E. (in press). Abraham general solvation parameter model: predictive expressions for solute transfer into hexyl acetate from both water and from the gas phase. Physics and Chemistry of Liquids. https://doi.org/10.1080/00319104.2026.2731560">Cite</button></div></article></div></div>
@@ -404,7 +476,16 @@ a.tl.pl, .courses a, .panel.light a.tl.pl { color: inherit; font-weight: inherit
 document.documentElement.classList.add('js');
 (function () {
   var io = null;
-  try { io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 }); } catch (e) {}
+  try { io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target, n = 0, s = el.previousElementSibling;
+      while (s && n < 4) { if (s.classList && s.classList.contains('rv') && !s.classList.contains('in')) n++; s = s.previousElementSibling; }
+      if (n) el.style.transitionDelay = (n * 110) + 'ms';
+      el.classList.add('in'); io.unobserve(el);
+      setTimeout(function () { el.style.transitionDelay = ''; el.classList.add('done'); }, 1300 + n * 110);
+    });
+  }, { threshold: 0.08 }); } catch (e) {}
   function reveal() {
     document.querySelectorAll('.panel, .entry, .body-grid > h2, .pubs li').forEach(function (el) {
       if (el.classList.contains('rv')) return;
@@ -413,6 +494,18 @@ document.documentElement.classList.add('js');
     });
   }
   reveal();
+  document.addEventListener('pointermove', function (e) {
+    if (e.pointerType && e.pointerType !== 'mouse') return;
+    var p = e.target.closest ? e.target.closest('.panel.done') : null; if (!p) return;
+    var r = p.getBoundingClientRect(); if (!r.width) return;
+    var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+    var cap = Math.min(1, 700 / r.width);
+    p.style.setProperty('--ry', (x * 3.2 * cap).toFixed(2) + 'deg'); p.style.setProperty('--rx', (-y * 2.4).toFixed(2) + 'deg');
+  }, { passive: true });
+  document.addEventListener('pointerout', function (e) {
+    var p = e.target.closest ? e.target.closest('.panel.done') : null; if (!p || (e.relatedTarget && p.contains(e.relatedTarget))) return;
+    p.style.removeProperty('--rx'); p.style.removeProperty('--ry');
+  });
   document.addEventListener('click', function (ev) {
     var z = ev.target.closest('.zoom');
     if (z) {
@@ -442,8 +535,22 @@ document.documentElement.classList.add('js');
     var id = (location.hash || '').replace('#', ''); var toWork = id === 'work';
     if (toWork) id = 'about';
     if (ids.indexOf(id) < 0) id = 'about';
+    var cur = null; ids.forEach(function (k) { var p = document.getElementById('p-' + k); if (p && !p.hidden) cur = p; });
+    var rmq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var next = document.getElementById('p-' + id);
+    if (show.busy) return;
+    if (cur && next && cur !== next && !rmq && !show.skip) {
+      show.busy = true; cur.classList.add('fadeout');
+      setTimeout(function () { cur.classList.remove('fadeout'); show.busy = false; show.skip = true; show(); show.skip = false; }, 190);
+      return;
+    }
+    swap(id); finish(toWork);
+  }
+  function swap(id) {
     ids.forEach(function (k) { var p = document.getElementById('p-' + k); if (p) p.hidden = (k !== id); });
     links.forEach(function (a) { if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  }
+  function finish(toWork) {
     try {
       var w = document.getElementById('work');
       if (toWork && w) { w.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else { window.scrollTo(0, 0); }
@@ -481,6 +588,110 @@ document.documentElement.classList.add('js');
     window.addEventListener('scroll', req, { passive: true });
     window.addEventListener('resize', req);
     apply();
+  })();
+  (function () {
+    var art = document.getElementById('bgart'), src = document.getElementById('artsrc');
+    if (!art || !src) return;
+    var shapes = [].slice.call(src.querySelectorAll('svg')), items = [], ly = 0, tm = null, Hc = 1200, PAD = 200;
+    function build() {
+      var small = window.innerWidth < 960, cols = small ? 2 : 3, vh = window.innerHeight, per = (vh + 400) / 4 >= 255 ? 4 : 3;
+      Hc = vh + PAD * 2; art.innerHTML = ''; items = [];
+      for (var c = 0; c < cols; c++) {
+        for (var k = 0; k < per; k++) {
+          var n = c * per + k, s = shapes[(k * 3 + c * 4 + c) % shapes.length].cloneNode(true);
+          var wide = parseFloat(s.getAttribute('viewBox').split(' ')[2]) > 130;
+          var w = Math.round((small ? 78 : 108) * (wide ? 1.45 : 1) + (k % 2) * 10);
+          s.style.width = w + 'px';
+          var dir = c === 1 ? (k % 2 ? 1 : -1) : (c ? -1 : 1);
+          if (small) { if (c) s.style.right = '3%'; else s.style.left = '3%'; }
+          else if (c === 0) s.style.left = (k % 2 ? 4.5 : 2) + '%';
+          else if (c === 2) s.style.right = (k % 2 ? 4.5 : 2) + '%';
+          else s.style.left = 'calc(50% - ' + Math.round(w / 2) + 'px)';
+          s.style.setProperty('--r0', (dir * (-8 + (k % 3) * 6)) + 'deg');
+          s.style.setProperty('--r1', (dir * (12 - (k % 3) * 5)) + 'deg');
+          s.style.setProperty('--dx', (dir * (20 + (k % 3) * 8)) + 'px');
+          s.style.setProperty('--dy', ((k % 2 ? -1 : 1) * (26 + (k % 3) * 8)) + 'px');
+          s.style.setProperty('--d', (22 + (n % 4) * 4) + 's');
+          if (c === 1 && !small) s.style.opacity = '.8';
+          s.dataset.base = (k * (Hc / per) + c * (Hc / (per * cols))).toFixed(1);
+          s.dataset.sp = (0.3 + c * 0.07).toFixed(2);
+          art.appendChild(s); items.push(s);
+        }
+      }
+      par();
+    }
+    function par() {
+      var y = window.pageYOffset || 0;
+      for (var i = 0; i < items.length; i++) {
+        var v = parseFloat(items[i].dataset.base) - y * parseFloat(items[i].dataset.sp);
+        v = ((v % Hc) + Hc) % Hc - PAD;
+        items[i].style.setProperty('--py', v.toFixed(1) + 'px');
+      }
+      var pa = document.getElementById('p-about'), o = 1;
+      if (pa && !pa.hidden) { var st = document.querySelector('.stage'), sh2 = st ? st.offsetHeight : window.innerHeight; o = Math.min(1, Math.max(0, (y - sh2 * 0.55) / (sh2 * 0.35))) * 0.9 + 0.1 * (y > sh2 ? 1 : 0); }
+      art.style.opacity = o.toFixed(2);
+    }
+    window.addEventListener('scroll', function () { if (!ly) ly = requestAnimationFrame(function () { ly = 0; par(); }); }, { passive: true });
+    window.addEventListener('hashchange', function () { setTimeout(par, 260); });
+    window.addEventListener('resize', function () { clearTimeout(tm); tm = setTimeout(build, 250); });
+    build();
+  })();
+  (function () {
+    var sa = document.getElementById('stageart'), src = document.getElementById('artsrc'), stg = document.querySelector('.stage');
+    if (!sa || !src || !stg) return;
+    var sh = [].slice.call(src.querySelectorAll('svg')), tm = null;
+    // [shape index, width px]
+    var L = [[0, 84], [8, 92], [9, 62], [10, 100], [7, 52], [1, 92], [12, 150], [11, 62], [4, 78], [3, 70], [0, 86], [2, 92], [5, 72], [6, 120], [9, 50], [11, 54]];
+    L = L.slice(0, 5);
+    var M = 34;
+    function hit(a, b) { return a[0] < b[2] + M && b[0] < a[2] + M && a[1] < b[3] + M && b[1] < a[3] + M; }
+    function build() {
+      sa.innerHTML = '';
+      var sr = stg.getBoundingClientRect(), W = sr.width, H = sr.height;
+      if (W < 961 || H < 100) return;
+      var obs = [];
+      function add(r) { obs.push([r.left - sr.left, r.top - sr.top, r.right - sr.left, r.bottom - sr.top]); }
+      var card = stg.querySelector('.card'); if (card) add(card.getBoundingClientRect());
+      stg.querySelectorAll('.hello h1, .hello p, .hello a, .hello .pill').forEach(function (e) {
+        var g = document.createRange(); g.selectNodeContents(e); add(g.getBoundingClientRect());
+      });
+      var edge = W * 0.38, placed = [], cx = [];
+      L.forEach(function (d, i) {
+        var s = sh[d[0]].cloneNode(true), vb = s.getAttribute('viewBox').split(' ');
+        var w = Math.round(108 * (parseFloat(vb[2]) > 130 ? 1.45 : 1)) + (i % 2) * 10, h = w * parseFloat(vb[3]) / parseFloat(vb[2]);
+        var best = null, bs = -1;
+        for (var x = 16; x + w < W - 16; x += 24) for (var y = 16; y + h < H - 16; y += 24) {
+          var r = [x, y, x + w, y + h];
+          if (r[0] < edge + M) continue;
+          var bad = false; for (var k = 0; k < obs.length && !bad; k++) if (hit(r, obs[k])) bad = true;
+          for (k = 0; k < placed.length && !bad; k++) if (hit(r, placed[k])) bad = true;
+          if (bad) continue;
+          var mx = x + w / 2, my = y + h / 2, md = 1e9;
+          cx.forEach(function (c) { md = Math.min(md, Math.hypot(c[0] - mx, c[1] - my)); });
+          if (md > bs) { bs = md; best = r; }
+        }
+        if (!best) return;
+        placed.push(best); cx.push([(best[0] + best[2]) / 2, (best[1] + best[3]) / 2]);
+        var dir = i % 2 ? -1 : 1;
+        s.style.left = best[0] + 'px'; s.style.top = best[1] + 'px'; s.style.width = w + 'px';
+        if (best[2] < edge) s.setAttribute('class', 'dk');
+        s.style.setProperty('--r0', (dir * -5) + 'deg'); s.style.setProperty('--r1', (dir * 8) + 'deg');
+        s.style.setProperty('--dx', (dir * 10) + 'px'); s.style.setProperty('--dy', ((i % 3 - 1) * 12 || 10) + 'px');
+        s.style.setProperty('--d', (18 + (i % 4) * 4) + 's');
+        sa.appendChild(s);
+      });
+      fade();
+    }
+    function fade() {
+      var y = window.pageYOffset || 0, hh = stg.offsetHeight || window.innerHeight;
+      sa.style.opacity = Math.max(0, 1 - y / (hh * 0.2)).toFixed(2);
+    }
+    window.addEventListener('scroll', fade, { passive: true });
+    window.addEventListener('resize', function () { clearTimeout(tm); tm = setTimeout(build, 250); });
+    window.addEventListener('hashchange', function () { setTimeout(build, 300); });
+    window.addEventListener('load', build);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+    build();
   })();
   var chips = document.getElementById('chips');
   if (chips) chips.addEventListener('click', function (e) {
