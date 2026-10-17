@@ -399,14 +399,19 @@ body:has(#p-about:not([hidden])) .card .top, body:has(#p-about:not([hidden])) .c
 body:has(#p-about:not([hidden])) .card { background:#2B313D; }
 .body-grid.first, .bar, .stage, .darkband, .darkband .panel { --link-dark:#FFEDA8; }
 .stat, .lcard, .panel.light { --link-dark:#AD9645; }
+.ni img { display:block; width:50px; height:50px; opacity:.6; transition:opacity .25s, transform .25s; }
+.ni:hover img, .ni[aria-current="page"] img { opacity:1; transform:translateY(-1px); }
+nav#nav { display:flex; gap:20px; align-items:center; }
+nav a.ni { padding-block:6px; }
+nav a.ni::after { bottom:-2px; }
 </style>
 
 <div class="bar">
   <a class="brand" href="#about" aria-label="Divya Mohanraj"><img class="namemark" src="labels/name.png?v=6" alt="Divya Mohanraj" width="198" height="54"></a>
   <nav aria-label="Pages" id="nav">
-    <a href="#about">About me</a>
-    <a href="#publications">Research &amp; Publications</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" class="ni" aria-label="About me" title="About me"><img src="labels/nav-about.png?v=7" alt="" width="50" height="50"></a>
+    <a href="#publications" class="ni" aria-label="Research &amp; Publications" title="Research &amp; Publications"><img src="labels/nav-research.png?v=7" alt="" width="50" height="50"></a>
+    <a href="#contact" class="ni" aria-label="Contact" title="Contact"><img src="labels/nav-contact.png?v=7" alt="" width="50" height="50"></a>
   </nav>
 </div>
 
@@ -735,3 +740,18 @@ document.documentElement.classList.add('js');
   });
 })();
 </script>
+<style>
+nav a.ni::after { display:none !important; content:none !important; }
+.ni img { transition:opacity .3s ease, transform .3s cubic-bezier(.2,.7,.3,1); transform-origin:center; }
+.ni:hover img, .ni:focus-visible img { opacity:1; transform:scale(1.22); }
+.ni[aria-current="page"] img { opacity:1; transform:none; }
+.ni[aria-current="page"]:hover img { transform:scale(1.22); }
+</style>
+<style>
+.ni img { transition:opacity .3s ease, transform .35s cubic-bezier(.3,1.4,.5,1); }
+.ni:hover img, .ni:focus-visible img, .ni[aria-current="page"]:hover img { opacity:1; transform:scale(1.25) rotate(-8deg); }
+@media (prefers-reduced-motion: reduce){ .ni img{transition:opacity .3s} .ni:hover img{transform:none} }
+</style>
+<style>
+body:has(#p-contact:not([hidden])) { --bg:#2B313D; --strip:#2B313D; background:#2B313D; background-image:none; }
+</style>
